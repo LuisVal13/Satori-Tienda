@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>SATORI — Producto</title>
+  <meta name="description" content="Detalle de producto — SATORI Relojería." />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,500;1,600&family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="assets/css/styles.css" />
+</head>
+<body>
+
+  <!-- HEADER -->
+  <header class="header" id="header">
+    <div class="wrap header__bar">
+      <a class="brand" href="index.html" aria-label="SATORI — inicio">
+        <img class="brand__mark" src="assets/brand/logo-gold.png" alt="" />
+        <span class="brand__name">Satori</span>
+      </a>
+      <nav class="nav" aria-label="Principal">
+        <a href="index.html#catalogo">Colección</a>
+        <a href="index.html#historia">La marca</a>
+        <a href="index.html#detalles">Detalles</a>
+        <a href="index.html#contacto">Contacto</a>
+      </nav>
+      <button class="menu-btn" id="menu-open" aria-label="Abrir menú">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+      </button>
+    </div>
+  </header>
+
+  <div class="drawer" id="drawer" aria-hidden="true">
+    <button class="drawer__close" id="menu-close" aria-label="Cerrar menú">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"><path d="M6 6l12 12M18 6L6 18"/></svg>
+    </button>
+    <nav aria-label="Menú móvil">
+      <a href="index.html#catalogo">Colección</a>
+      <a href="index.html#historia">La marca</a>
+      <a href="index.html#detalles">Detalles</a>
+      <a href="index.html#contacto">Contacto</a>
+    </nav>
+  </div>
+
+  <!-- La ficha se arma sola desde products.js según ?id=... -->
+  <main id="product-root" class="product-page"></main>
+
+  <!-- FOOTER -->
+  <footer class="footer" id="contacto">
+    <div class="wrap footer__inner">
+      <a class="brand" href="index.html" aria-label="SATORI — inicio">
+        <img class="brand__mark" src="assets/brand/logo-gold.png" alt="" />
+      </a>
+      <span class="brand__name">Satori</span>
+      <nav class="footer__nav" aria-label="Pie de página">
+        <a href="index.html#catalogo">Colección</a>
+        <a href="index.html#historia">La marca</a>
+        <a href="index.html#detalles">Detalles</a>
+        <a data-wa target="_blank" rel="noopener" href="#">WhatsApp</a>
+      </nav>
+      <p class="footer__legal">© 2026 SATORI · Relojería · Venezuela</p>
+    </div>
+  </footer>
+
+  <script src="assets/js/products.js"></script>
+  <script src="assets/js/producto.js"></script>
+</body>
+</html>
