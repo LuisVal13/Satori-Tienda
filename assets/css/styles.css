@@ -307,7 +307,7 @@ button { font: inherit; color: inherit; cursor: pointer; background: none; borde
 .slide.is-missing img { display: none; }
 .slide.is-missing .slide__ph { display: block; }
 .pd__cdots { display: flex; gap: 8px; justify-content: center; margin-top: 16px; }
-.cdot { width: 8px; height: 8px; border-radius: 50%; background: var(--outline-variant); transition: background .2s ease, transform .2s ease; cursor: pointer; }
+.cdot { width: 10px; height: 10px; border-radius: 50%; background: var(--outline-variant); transition: background .2s ease, transform .2s ease; cursor: pointer; }
 .cdot.is-active { background: var(--primary-cont); transform: scale(1.25); }
 
 /* Información */
@@ -432,4 +432,43 @@ button { font: inherit; color: inherit; cursor: pointer; background: none; borde
   * { scroll-behavior: auto !important; }
   .reveal { opacity: 1; transform: none; transition: none; }
   .card, .card__media img, .btn, .btn .arrow, .gallery__item img { transition: none !important; }
+}
+
+/* ============================================================
+   Flechas interactivas carrusel para la izquierda o la derecha
+   ============================================================ */
+
+   /* Estilo base para las flechas del carrusel */
+.carousel-arrow {
+  position: absolute;
+  top: 45%; /* Centrado verticalmente respecto a la imagen */
+  transform: translateY(-50%);
+  background: rgba(255, 255, 255, 0.7); /* Fondo blanco semitransparente */
+  color: #1a1a1a; /* Color de la flecha */
+  border: none;
+  border-radius: 50%;
+  width: 36px;
+  height: 36px;
+  font-size: 16px;
+  cursor: pointer;
+  z-index: 10; /* Asegura que estén por encima de la imagen */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background 0.2s ease, transform 0.2s ease;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.carousel-arrow:hover {
+  background: rgba(255, 255, 255, 1);
+  transform: translateY(-50%) scale(1.1); /* Efecto de crecimiento al pasar el mouse */
+}
+
+/* Posiciones específicas */
+.prev-arrow {
+  left: 0px; /* Separación del borde izquierdo */
+}
+
+.next-arrow {
+  right: 0px; /* Separación del borde derecho */
 }

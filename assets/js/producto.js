@@ -56,7 +56,7 @@
 
     // Miniaturas circulares de color (imagen real)
     const swatches = product.variants.map((vr, i) => `
-      <a class="swatch ${i === current ? "is-active" : ""}" href="producto.html?id=${encodeURIComponent(product.id)}&color=${i}"
+      <a class="swatch ${i === current ? "is-active" : ""}" href="javascript:location.replace('producto.html?id=${encodeURIComponent(product.id)}&color=${i}')"
          aria-label="${esc(vr.color)}" title="${esc(vr.color)}">
         <img src="${esc(vr.image)}" alt="" onerror="this.style.opacity=0">
       </a>`).join("");
@@ -65,17 +65,19 @@
     const pays = (typeof PAYMENTS !== "undefined" ? PAYMENTS : []).map((p) => `<li>${esc(p)}</li>`).join("");
 
     root.innerHTML = `
-      <div class="wrap"><a class="pd__back" href="index.html">← Volver al catálogo</a></div>
+      <div class="wrap"><a class="pd__back" href="javascript:history.back()">← Volver al catálogo</a></div>
       <div class="wrap pd">
         <!-- Galería: carrusel con scroll horizontal táctil -->
-        <div class="pd__gallery">
-          <div class="pd__carousel" id="pd-carousel">${slides}</div>
-          <div class="pd__cdots">${dots}</div>
+        <div class="pd__gallery" style="position: relative;">
+        <button class="carousel-arrow prev-arrow" onclick="document.getElementById('pd-carousel').scrollBy({left: -document.getElementById('pd-carousel').clientWidth, behavior: 'smooth'})">&#10094;</button>
+        <div class="pd__carousel" id="pd-carousel">${slides}</div>
+        <button class="carousel-arrow next-arrow" onclick="document.getElementById('pd-carousel').scrollBy({left: document.getElementById('pd-carousel').clientWidth, behavior: 'smooth'})">&#10095;</button>
+        <div class="pd__cdots">${dots}</div>
         </div>
 
         <!-- Información -->
         <div class="pd__info">
-          <p class="eyebrow">Referencia ${esc(product.code)}</p>
+          <p class="eyebrow">Diametro de ${esc(product.code)}</p>
           <h1 class="pd__name">${esc(product.name)}</h1>
           <p class="pd__insp">${esc(product.inspiration || "")}</p>
 

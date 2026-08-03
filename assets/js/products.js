@@ -35,7 +35,7 @@ const PAYMENTS = ["Pago Móvil a tasa BCV", "Efectivo en dólares"];
 const PRODUCTS = [
   /* ============ DELUXE — Poedagar 613 ============ */
   {
-    id: "deluxe", code: "613", name: "Deluxe",
+    id: "deluxe", code: "40 milimetros", name: "Poedagar 613",
     inspiration: "Inspirado en el Patek Philippe Nautilus",
     priceUSD: 30, compareUSD: null, visible: true, stock: 12,
     specs: [
@@ -58,7 +58,7 @@ const PRODUCTS = [
 
   /* ============ OAK — Poedagar 930 · 6.5 (bisel estriado) ============ */
   {
-    id: "oak", code: "930 · 6.5", name: "Oak",
+    id: "oak", code: "40 milimetros", name: "Poedagar 930",
     inspiration: "Inspirado en el Rolex Day-Date",
     priceUSD: 30, compareUSD: null, visible: true, stock: 16, // 930·6.5: inventario que compartes con "Signature"
     specs: [
@@ -80,11 +80,11 @@ const PRODUCTS = [
 
   /* ============ SIGNATURE — Poedagar 930 · 6.5 (esfera plana) ============ */
   {
-    id: "signature", code: "930 · 6.5", name: "Signature",
-    inspiration: "Inspirado en el Rolex Day-Date",
-    priceUSD: 30, compareUSD: null, visible: true, stock: 16, // mismo código 930·6.5 que "Oak"
+    id: "signature", code: "40 milimetros", name: "Poedagar 930",
+    inspiration: "Edición especial con correa de cuero",
+    priceUSD: 25, compareUSD: null, visible: true, stock: 16, // mismo código 930·6.5 que "Oak"
     specs: [
-      { label: "Material", value: "Acero inoxidable" },
+      { label: "Material", value: "Acero · correa de cuero" },
       { label: "Caja", value: "Redonda · esfera plana" },
       { label: "Movimiento", value: "Cuarzo" },
       { label: "Funciones", value: "Día / Fecha" },
@@ -92,17 +92,13 @@ const PRODUCTS = [
       { label: "Cristal", value: "Resistente a rayones" },
     ],
     variants: [
-      { color: "Verde agua", image: "assets/products/signature/verde-agua.webp",
-        gallery: ["assets/products/signature/verde-agua-life-1.webp", "assets/products/signature/verde-agua-life-2.webp"] },
-      { color: "Azul",   image: "assets/products/signature/azul.webp",   gallery: [] },
-      { color: "Blanco", image: "assets/products/signature/blanco.webp", gallery: ["assets/products/signature/blanco-life-1.webp"] },
-      { color: "Negro",  image: "assets/products/signature/negro.webp",  gallery: ["assets/products/signature/negro-life-1.webp"] },
+      { color: "Blanco", image: "assets/products/signature/cuero-blanco-1.jpg", gallery: [] },
     ],
   },
 
   /* ============ ROYAL — Poedagar 853 (octagonal) ============ */
   {
-    id: "royal", code: "853", name: "Royal",
+    id: "royal", code: "44 milimetros", name: "Poedagar 853",
     inspiration: "Inspirado en el Audemars Piguet Royal Oak",
     priceUSD: 35, compareUSD: null, visible: true, stock: 9,
     specs: [
@@ -123,7 +119,7 @@ const PRODUCTS = [
 
   /* ============ PRÉSIDENT — Nibosi 2628 ============ */
   {
-    id: "president", code: "2628", name: "Président",
+    id: "president", code: "40 milimetros", name: "Nibosi 2628",
     inspiration: "Inspirado en el Rolex Day-Date",
     priceUSD: 35, compareUSD: null, visible: true, stock: 6,
     specs: [
@@ -139,24 +135,6 @@ const PRODUCTS = [
         gallery: ["assets/products/president/blanco-life-1.webp", "assets/products/president/caseback.webp"] },
       { color: "Negro",  image: "assets/products/president/negro.webp",
         gallery: ["assets/products/president/negro-life-1.webp", "assets/products/president/caseback.webp"] },
-    ],
-  },
-
-  /* ============ (OCULTO) Poedagar 930 · 5.5 — correa de cuero ============
-     Solo 4 unidades. Tendrá su publicación dedicada cuando haya más fotos.
-     Cambia visible: true cuando quieras mostrarlo. */
-  {
-    id: "cuero", code: "930 · 5.5", name: "Edición Cuero",
-    inspiration: "Edición especial con correa de cuero",
-    priceUSD: 25, compareUSD: null, visible: false, stock: 4,
-    specs: [
-      { label: "Material", value: "Acero · correa de cuero" },
-      { label: "Movimiento", value: "Cuarzo" },
-      { label: "Funciones", value: "Día / Fecha" },
-      { label: "Resistencia", value: "3 ATM" },
-    ],
-    variants: [
-      { color: "Blanco", image: "assets/products/leather/blanco.jpg", gallery: [] },
     ],
   },
 ];
