@@ -9,7 +9,7 @@
    ============================================================ */
 
 /* ---------- Configuración de la tienda ---------- */
-const WHATSAPP_NUMBER = "584120000000"; // tu número, sin "+" ni espacios
+const WHATSAPP_NUMBER = "584123339910"; // tu número, sin "+" ni espacios
 const CURRENCY = "$";
 
 /* Precio en bolívares:
